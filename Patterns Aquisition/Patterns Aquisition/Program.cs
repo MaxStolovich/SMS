@@ -8,9 +8,12 @@ namespace Patterns_Aquisition
 {
     class Program
     {
+         
+
         static void Main(string[] args)
         {
-            new Runner().run();
+            Strategy strategy= new ConsoleStrategy();
+            new Runner(strategy).run();
 
         }
 
@@ -18,14 +21,22 @@ namespace Patterns_Aquisition
 
         private class Runner
         {
-            public Runner()
+            private Strategy strategy;
+
+            public Runner(Strategy strategy)
             {
+                this.strategy = strategy;
             }
 
             public void run()
             {
-                Console.WriteLine("Hello World!");
+                strategy.Print("Hello World!");
             }
         }
+    }
+
+    public interface Strategy
+    {
+        void Print(string message);
     }
 }
