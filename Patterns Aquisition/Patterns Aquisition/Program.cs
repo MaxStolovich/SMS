@@ -12,8 +12,7 @@ namespace Patterns_Aquisition
 
         static void Main(string[] args)
         {
-            Strategy strategy= new ConsoleStrategy();
-            new Runner(strategy).run();
+            new Runner(new ConsoleStrategy.getInstance()).run();
 
         }
 
