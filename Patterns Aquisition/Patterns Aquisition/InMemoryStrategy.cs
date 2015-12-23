@@ -19,7 +19,7 @@ namespace Patterns_Aquisition
         
 
            
-        }
+        
 
     }
 }

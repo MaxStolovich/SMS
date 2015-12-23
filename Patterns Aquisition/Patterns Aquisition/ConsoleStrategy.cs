@@ -2,7 +2,7 @@
 
 namespace Patterns_Aquisition
 {
-    internal class ConsoleStrategy : Strategy
+    public class ConsoleStrategy : Strategy
     {
         private ConsoleStrategy()
         { }

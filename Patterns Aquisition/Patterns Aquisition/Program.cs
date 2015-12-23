@@ -12,7 +12,7 @@ namespace Patterns_Aquisition
 
         static void Main(string[] args)
         {
-            new Runner(new ConsoleStrategy.getInstance()).run();
+            new Runner(new Adapter(ConsoleStrategy.GetInstance())).run();
 
         }
 
@@ -20,16 +20,16 @@ namespace Patterns_Aquisition
 
         private class Runner
         {
-            private Strategy strategy;
+            private Target target;
 
-            public Runner(Strategy strategy)
+            public Runner(Target t)
             {
-                this.strategy = strategy;
+                this.target = t;
             }
 
             public void run()
             {
-                strategy.Print("Hello World!");
+                target.AddMessage(new string[] { "Hello World!"} );
             }
         }
     }
