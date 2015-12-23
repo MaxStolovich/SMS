@@ -18,7 +18,7 @@ namespace Patterns_Aquisition
 
 
 
-        private class Runner
+        private class Runner : Component
         {
             private Target target;
 
